@@ -43,8 +43,5 @@ class AppFlowRoboElectricTest {
         firstButton.check(matches(isDisplayed()))
 
         firstButton.perform(click())
-
-
-
     }
 }
