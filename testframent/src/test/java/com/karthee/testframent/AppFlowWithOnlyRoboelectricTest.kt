@@ -47,5 +47,7 @@ class AppFlowWithOnlyRoboelectricTest {
         buttonfourth.callOnClick()
 
         assert(buttonFirst.text == "Next")
+
+        assert(BuildConfig.DEBUG)
     }
 }
