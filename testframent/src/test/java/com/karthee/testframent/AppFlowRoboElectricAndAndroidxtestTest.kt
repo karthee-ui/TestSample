@@ -11,10 +11,7 @@ import androidx.test.runner.AndroidJUnit4
 
 
 @RunWith(AndroidJUnit4::class)
-class AppFlowRoboElectricTest {
-
-//    @get:Rule
-//    val rule = Acti(MainActivity::class.java)
+class AppFlowRoboElectricAndAndroidxtestTest {
 
     @Test
     fun testAppFlow() {

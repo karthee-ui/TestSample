@@ -1,7 +1,5 @@
 package com.karthee.testframent
 
-import android.widget.Button
-import androidx.test.runner.AndroidJUnit4
 import kotlinx.android.synthetic.main.fragment_first.*
 import kotlinx.android.synthetic.main.fragment_fourth.*
 import kotlinx.android.synthetic.main.fragment_second.*
@@ -9,9 +7,10 @@ import kotlinx.android.synthetic.main.fragment_third.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric.buildActivity
+import org.robolectric.RobolectricTestRunner
 
-@RunWith(AndroidJUnit4::class)
-class Test2 {
+@RunWith(RobolectricTestRunner::class)
+class AppFlowWithOnlyRoboelectricTest {
     @Test
     fun appflowTest() {
         // GIVEN
