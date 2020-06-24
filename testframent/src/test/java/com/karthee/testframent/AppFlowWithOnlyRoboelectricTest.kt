@@ -1,7 +1,6 @@
 package com.karthee.testframent
 
 import kotlinx.android.synthetic.main.fragment_first.*
-import kotlinx.android.synthetic.main.fragment_fourth.*
 import kotlinx.android.synthetic.main.fragment_second.*
 import kotlinx.android.synthetic.main.fragment_third.*
 import org.junit.Test
@@ -21,32 +20,26 @@ class AppFlowWithOnlyRoboelectricTest {
         controller.create().start()
 
         // THEN
+        activity.apply {
 
-        val buttonFirst = activity.button_first
+            assert(title == "First Fragment")
 
-        assert(buttonFirst != null)
+            assert(btnEnterDetails != null)
 
-        buttonFirst.callOnClick()
+            btnEnterDetails.callOnClick()
 
-        val buttonSecond = activity.button_second
+            assert(title == "Second Fragment")
 
-        assert(buttonSecond.text == "Next")
+            etOldUsername.setText("karthee")
+            etNewUsername.setText("android")
 
-        buttonSecond.callOnClick()
+            btnSubmit.callOnClick()
 
-        val buttonThird = activity.button_third
+            assert(title == "Third Fragment")
 
-        assert(buttonThird.text == "Next")
+            assert(tvSuccess.text == "Success")
 
-        buttonThird.callOnClick()
-
-        val buttonfourth = activity.button_fourth
-
-        assert(buttonfourth.text == "To First")
-
-        buttonfourth.callOnClick()
-
-        assert(buttonFirst.text == "Next")
+        }
 
         assert(BuildConfig.DEBUG)
     }

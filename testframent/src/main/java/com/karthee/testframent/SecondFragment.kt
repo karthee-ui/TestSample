@@ -23,8 +23,9 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.apply { title= "Second Fragment" }
 
-        view.findViewById<Button>(R.id.button_second).setOnClickListener {
+        view.findViewById<Button>(R.id.btnSubmit).setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
         }
     }

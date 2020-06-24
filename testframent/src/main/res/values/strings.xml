@@ -14,4 +14,9 @@
     <string name="hello_third_fragment">Third Fragment</string>
     <string name="toFirst">To First</string>
     <string name="hello_fourth_fragment">Forth Fragment</string>
+    <string name="submit_details">Enter details</string>
+    <string name="old_username">Old username</string>
+    <string name="new_username">New Username</string>
+    <string name="submit">Submit</string>
+    <string name="success">Success</string>
 </resources>

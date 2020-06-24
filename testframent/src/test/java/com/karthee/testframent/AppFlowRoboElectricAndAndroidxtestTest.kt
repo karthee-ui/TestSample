@@ -23,32 +23,32 @@ class AppFlowRoboElectricAndAndroidxtestTest {
 
         scenario.onActivity {
             activity ->
-            val buttonFirst = activity.findViewById<Button>(R.id.button_first)
+            val buttonFirst = activity.findViewById<Button>(R.id.btnEnterDetails)
 
             buttonFirst.callOnClick()
 
             val buttonSecond
-                    = activity.findViewById<Button>(R.id.button_second)
+                    = activity.findViewById<Button>(R.id.btnSubmit)
 
             assert(buttonSecond.text == "Next")
 
             buttonSecond.callOnClick()
 
-            val buttonThird
-                    = activity.findViewById<Button>(R.id.button_third)
-
-            assert(buttonThird.text == "Next")
-
-            buttonThird.callOnClick()
-
-            val buttonfourth
-                    = activity.findViewById<Button>(R.id.button_fourth)
-
-            assert(buttonfourth.text == "To First")
-
-            buttonfourth.callOnClick()
-
-            assert(buttonFirst.text == "Next")
+//            val buttonThird
+//                    = activity.findViewById<Button>(R.id.)
+//
+//            assert(buttonThird.text == "Next")
+//
+//            buttonThird.callOnClick()
+//
+//            val buttonfourth
+//                    = activity.findViewById<Button>(R.id.button_fourth)
+//
+//            assert(buttonfourth.text == "To First")
+//
+//            buttonfourth.callOnClick()
+//
+//            assert(buttonFirst.text == "Next")
 
 
         }
