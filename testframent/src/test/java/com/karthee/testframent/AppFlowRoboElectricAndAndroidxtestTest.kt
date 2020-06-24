@@ -3,6 +3,8 @@ package com.karthee.testframent
 
 
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ActivityScenario.launch
 import org.junit.Test
@@ -23,35 +25,28 @@ class AppFlowRoboElectricAndAndroidxtestTest {
 
         scenario.onActivity {
             activity ->
+
             val buttonFirst = activity.findViewById<Button>(R.id.btnEnterDetails)
 
             buttonFirst.callOnClick()
+            val etOldUsername = activity.findViewById<EditText>(R.id.etOldUsername)
+            val etNewUsername = activity.findViewById<EditText>(R.id.etNewUsername)
 
-            val buttonSecond
+            etOldUsername.setText("karthee")
+            etNewUsername.setText("android")
+
+            val btnSubmit
                     = activity.findViewById<Button>(R.id.btnSubmit)
 
-            assert(buttonSecond.text == "Next")
+            btnSubmit.callOnClick()
+            val tvSuccess = activity.findViewById<TextView>(R.id.tvSuccess)
 
-            buttonSecond.callOnClick()
-
-//            val buttonThird
-//                    = activity.findViewById<Button>(R.id.)
-//
-//            assert(buttonThird.text == "Next")
-//
-//            buttonThird.callOnClick()
-//
-//            val buttonfourth
-//                    = activity.findViewById<Button>(R.id.button_fourth)
-//
-//            assert(buttonfourth.text == "To First")
-//
-//            buttonfourth.callOnClick()
-//
-//            assert(buttonFirst.text == "Next")
-
+            assert(tvSuccess.text == "Success")
 
         }
+
+        assert(BuildConfig.DEBUG)
+
 //        val firstButton = onView(withId(R.id.button_first))
 //        val secondButton = onView(withId(R.id.button_second))
 //        val thirdButton = onView(withId(R.id.button_third))
